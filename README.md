@@ -33,7 +33,7 @@ In **grassetto** i nomi di cartelle, in *corsivo* i nomi di file.
 **Ho notato un errore, come posso segnalarlo?**
 
 Hai diverse opzioni per segnalare un errore:
-- Compila [questa scheda](https://github.com/UDC-TV/libreria/issues/new) indicando il numero di pagina e il tipo di errore riscontrato. Basta compilare il titolo e la descrizione, non è necessario compilare tutti i campi.
+- Compila [questa scheda](https://github.com/UDC-TV/manuale-statistico/issues/new) indicando il numero di pagina e il tipo di errore riscontrato. Basta compilare il titolo e la descrizione, non è necessario compilare tutti i campi.
 - Scrivi su uno dei canali social, preferibilmente Instagram o gli altri canali Meta.
 - Se vuoi restare anonimo, utilizza il [form segnalazioni sul sito](https://sites.google.com/view/udc-archivio-clip/segnalazioni).
 
