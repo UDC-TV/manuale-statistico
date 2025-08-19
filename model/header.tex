@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{xcolor} % Per utilizzare più colori
+\usepackage[left=3cm,right=3cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{hyperref} % Per i link ipertestuali
+\usepackage{ulem} % Per barrare il testo in caso di errori da segnalare
+
+\usepackage[scaled]{helvet} 
+\renewcommand{\familydefault}{\sfdefault} % Cambio font con uno più moderno
+
+\usepackage{xifthen} % Pacchetto necessario per verificare se un argomento è vuoto
+\usepackage[most]{tcolorbox} % Utilizzo del box colorato
+\usepackage{pdfpages} % Per includere pagine PDF (copertina del manuale customizzata per traduzione)
+
+\definecolor{risposta}{RGB}{31, 71, 204} % Colore della risposta
+\definecolor{gold}{RGB}{174, 159, 103} % Colore oro, utilizzato per il box esempio (ispirato FIBA)
+
+\newcommand{\D}[1]{\textcolor{black}{#1}} % (D)omanda
+\newcommand{\R}[1]{\vskip 0.15pt \textcolor{risposta}{\textbf{#1}}} % (R)isposta
+\usepackage{fancyhdr} % Per le intestazioni e i piè di pagina personalizzati
+
+% Struttura completa del box domanda-risposta (esempio)
+\newcommand{\qbox}[2]{
+    \begin{tcolorbox}[colframe=black, colback=gold, sharp corners]
+      \vbox{%
+      \ifthenelse{\isempty{#1}}{}{\D{#1}\par}%
+      \ifthenelse{\isempty{#2}}{}{%
+        \leavevmode\R{#2}%
+        \par%
+      }%
+    }%
+    \vskip 5pt
+    \end{tcolorbox}
+}
+
+% Linee di separazione per sezioni e sottosezioni, mini-titoli (ispirazione documento FIBA)
+\newcommand{\sectionline}{\vspace{-1em}\par\noindent\color{red}\rule{\linewidth}{0.8pt}\par\color{black}\vspace{0.5em}}
+\newcommand{\subsectionline}{\vspace{-1em}\par\noindent\color{red}\rule{\linewidth}{0.4pt}\par\color{black}}
+\newcommand{\minititle}[1]{\vspace{1em}\noindent\large\textbf{\textcolor{black}{#1}}\vspace{0.5em}}
+
+\pagestyle{fancy} % Nota su crediti traduzione
+\rfoot{\footnotesize Traduzione a cura di: \href{https://www.instagram.com/udc.tv/}{@udc.tv}}
+
+\begin{document}
+
+% Niente numeri di pagina all'inizio
+\pagenumbering{gobble}
+\includepdf{img/copertina.pdf} % immagine di copertina
+\newpage
+
+% Numeri romani per intestazione e prefazione
+\pagenumbering{roman}
+
+% Indice del documento
+\tableofcontents
+\newpage
